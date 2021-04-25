@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css" class="css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <a href="SearchPage.html"><button class = "btn btn-primary myBtn">Search</button></a>
+    <script>
+      const url = "https://api.github.com/users?since=10002&per_page=10";
+      fetch(url)
+        .then((resp) => resp.json())
+        .then(function (data) {
+          let github = data;
+          github.forEach((Element) => {
+            console.log(Element.login);
+            var para = document.createElement("div1");
+            para.innerHTML = "<div class='card' style='width: 18rem;'><img class='card-img-top pic' src='"+`${Element.avatar_url}`+"' alt='Card image cap'><div class='card-body'><h5 class='card-title title'>"+`${Element.login}`+"</h5><p class='card-text description'>"+`${Element.id}`+"</p><div class='container'><p class='card-text stars'>"+`Location : ${Element.location}`+"</p><p class='card-text issuses'>"+` company : ${Element.company}`+"</p></div><p class = 'card-text author'>"+`${Element.blog}`+"</p></div></div>";
+            document.body.appendChild(para);
+          });
+        });
+    </script>
+  </body>
+</html>

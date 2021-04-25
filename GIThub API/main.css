@@ -1,0 +1,78 @@
+body {
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+.card {
+    margin: 50px;
+    border: 2px solid grey;
+    display: inline-block !important;
+    -webkit-box-shadow: 5px 5px 13px 1px #000000;
+    box-shadow: 5px 5px 13px 1px #000000;
+    background: linear-gradient(180deg, rgba(158, 158, 156, 0.726) 36%, rgba(212, 231, 205, 0.13) 59%, rgba(212, 216, 210, 0.919) 95%);
+    width: max-content;
+}
+
+.description {
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.stars,
+.issuses {
+    border: 2px solid rgb(27, 26, 26);
+    margin-bottom: 0px;
+    font-size: 12px;
+    padding: 0px 5px ;
+    width: 80px;
+}
+
+.author {
+    border: none dashed blue;
+    text-align: center;
+    margin: 10px 30%;
+    font-size: 10px;
+}
+
+.pic {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 32%;
+    border: 2px solid rgb(255, 255, 255);
+    
+}
+
+.title
+{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.myBtn
+{
+    display: block;
+    margin-top: 10px;
+    margin-left: 45% ;
+}
+
+
+
+
+
+
